@@ -1,0 +1,19 @@
+name: Mi Primer Pipeline DevOps
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verificacion-basica:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v3
+
+      - name: Mensaje de éxito
+        run: echo "¡Hola Savka! Tu código se integró correctamente."
